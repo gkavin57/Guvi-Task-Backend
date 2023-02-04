@@ -27,6 +27,11 @@ app.use("/transections", require("./routes/transectionRoutes"));
 //port
 const PORT = 8080 || process.env.PORT;
 
+//testing
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
+
 //listen server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
