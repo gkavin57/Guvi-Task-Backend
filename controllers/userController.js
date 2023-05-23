@@ -23,7 +23,9 @@ const loginController = async (req, res) => {
 
 //Register Callback
 const registerController = async (req, res) => {
-  try {
+  try { 
+
+    console.log(req.body)
     const newUser = new userModel(req.body);
     await newUser.save();
     res.status(201).json({
